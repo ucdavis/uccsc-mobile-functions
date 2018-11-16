@@ -30,6 +30,11 @@ function parseResourceDataObject(response, data) {
 		Object.defineProperty(result, camelize(key), { value: value, enumerable: true });
     });
 	
+	// don't pursue relationships for files
+	if (data.type === 'file--file') {
+		return result;
+	}
+
 	// flatten relationships
 	Object.keys(data.relationships || {}).forEach(key => {
 		const value = data.relationships[key];

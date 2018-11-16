@@ -10,6 +10,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
+    "date-fns": "^1.29.0",
     "expo-server-sdk": "^2.3.3",
     "firebase-admin": "^5.8.2",
     "firebase-functions": "^0.8.1",
